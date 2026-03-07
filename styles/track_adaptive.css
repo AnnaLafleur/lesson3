@@ -1,0 +1,12 @@
+/* Адаптивные стили страницы отслеживания посылки */
+
+@media (max-width: 767px) {
+    .main {
+        left: 10px;
+        right: 10px;
+        top: 50%;
+        bottom: 12px;
+        width: auto;
+        max-width: none;
+    }
+}

@@ -1,0 +1,140 @@
+/* Фон карты */
+#map {
+    background-image: url("../images/order-bg.png");
+    background-size: cover;
+    position: fixed;
+    inset: 0;
+}
+
+/* Сайдбар */
+.main {
+    border-radius: 18px;
+    box-shadow: 0 7px 20px 0 #0000002E;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.96);
+    left: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 110px;
+    bottom: 20px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 5;
+}
+
+/* Шапка сайдбара */
+.main-header {
+    padding: 18px 18px 12px 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: bold;
+}
+
+.main-text {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #7C7C7C;
+}
+
+/* Контейнер контента сайдбара */
+.main-content {
+    padding: 14px 18px 18px 18px;
+    overflow: auto;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1;
+}
+
+/* Заголовки блоков */
+.main-block-title {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 6px;
+}
+
+/* Блок поиска */
+.main-track {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Поле ввода */
+.main-field {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    gap: 10px;
+    border: 1px solid #1111111A;
+    background: #FAFAFA;
+    border-radius: 10px;
+    padding: 10px 12px;
+    position: relative;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #111111;
+    font-family: inherit;
+}
+
+input::placeholder {
+    color: #7C7C7C;
+}
+
+.main-field:focus-within {
+    border-color: rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.35);
+    background: rgba(255, 255, 255, 0.75);
+}
+
+/* Кнопка отслеживания */
+.track-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Блок результатов */
+.main-result {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 16px;
+    padding: 12px;
+    line-height: 1.25;
+}
+
+.main-result-title {
+    font-weight: bold;
+    font-size: 13px;
+    color: #111111;
+    margin-bottom: 13px;
+}
+
+.main-result-lines {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-result-line {
+    font-size: 13px;
+    color: rgba(17, 17, 17, 0.85);
+    display: flex;
+    justify-content: space-between;
+}

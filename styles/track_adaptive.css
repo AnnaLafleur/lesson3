@@ -1,12 +1,15 @@
-/* Адаптивные стили страницы отслеживания посылки */
-
 @media (max-width: 767px) {
-    .main {
-        left: 10px;
-        right: 10px;
-        top: 50%;
-        bottom: 12px;
-        width: auto;
-        max-width: none;
+    .container {
+        padding: 130px 0 50px 0;
+    }
+
+    .track-content {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .track-result-header {
+        padding: 20px;
     }
 }

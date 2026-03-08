@@ -1,140 +1,179 @@
-/* Фон карты */
-#map {
-    background-image: url("../images/order-bg.png");
+.container {
+    background: #F4F4F4 url("../images/track-bg.png");
     background-size: cover;
-    position: fixed;
-    inset: 0;
+    min-height: 100vh;
+    padding: 170px 0 50px 0;
 }
 
-/* Сайдбар */
-.main {
+.track-content {
+    width: 593px;
+    margin: 0 auto;
+}
+
+/* === CARD === */
+
+.track-card {
+    width: 100%;
     border-radius: 18px;
     box-shadow: 0 7px 20px 0 #0000002E;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.96);
-    left: 20px;
     border: 1px solid rgba(0, 0, 0, 0.08);
-    position: fixed;
-    top: 110px;
-    bottom: 20px;
-    width: 380px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 5;
 }
 
-/* Шапка сайдбара */
-.main-header {
-    padding: 18px 18px 12px 18px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    display: flex;
-    flex-direction: column;
-}
+/* === SEARCH BLOCK === */
 
-.main-title {
+.track-title {
     font-size: 20px;
     line-height: 100%;
     font-weight: bold;
+    border-bottom: 1px solid #EEEEEE;
+    padding: 20px;
 }
 
-.main-text {
-    font-size: 12px;
-    margin-top: 5px;
-    color: #7C7C7C;
+.track-action {
+    padding: 20px;
 }
 
-/* Контейнер контента сайдбара */
-.main-content {
-    padding: 14px 18px 18px 18px;
-    overflow: auto;
-    scrollbar-width: none;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    flex: 1;
-}
-
-/* Заголовки блоков */
-.main-block-title {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 6px;
-}
-
-/* Блок поиска */
-.main-track {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-/* Поле ввода */
-.main-field {
-    display: flex;
-    align-items: center;
-    margin-top: 6px;
-    gap: 10px;
-    border: 1px solid #1111111A;
-    background: #FAFAFA;
-    border-radius: 10px;
-    padding: 10px 12px;
-    position: relative;
-    box-sizing: border-box;
+.track-button {
+    width: 100%;
     height: 50px;
 }
 
-input {
+.track-field {
+    margin-bottom: 10px;
+}
+
+.main-field input {
     width: 100%;
-    border: 0;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #EEEEEE;
     outline: none;
-    background: transparent;
+    padding: 0 16px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #111111;
+    background: #F4F4F4;
+}
+
+.main-field input::placeholder {
+    color: rgba(17, 17, 17, 0.4);
+}
+
+.main-field input:focus {
+    border-color: #FFCC00;
+}
+
+/* === RESULT BLOCK === */
+
+.track-result {
+    margin-top: 5px;
+    display: none;
+}
+
+.track-result.is-visible {
+    display: block;
+}
+
+.track-result-header {
+    font-weight: bold;
     font-size: 14px;
     color: #111111;
-    font-family: inherit;
+    padding: 20px;
+    border-bottom: 1px solid #EEEEEE;
 }
 
-input::placeholder {
-    color: #7C7C7C;
+.track-id {
+    margin-bottom: 12px;
+    font-size: 20px;
 }
 
-.main-field:focus-within {
-    border-color: rgba(0, 0, 0, 0.20);
-    box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.35);
-    background: rgba(255, 255, 255, 0.75);
-}
-
-/* Кнопка отслеживания */
-.track-button {
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* Блок результатов */
-.main-result {
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    background: rgba(255, 255, 255, 0.75);
-    border-radius: 16px;
-    padding: 12px;
-    line-height: 1.25;
-}
-
-.main-result-title {
-    font-weight: bold;
-    font-size: 13px;
-    color: #111111;
-    margin-bottom: 13px;
-}
-
-.main-result-lines {
-    gap: 8px;
+.track-routes {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    font-weight: normal;
 }
 
-.main-result-line {
-    font-size: 13px;
-    color: rgba(17, 17, 17, 0.85);
+.track-route {
     display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.track-route-pin {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.track-route-arrow {
+    padding: 15px 0;
+    width: 24px;
+    height: 24px;
+}
+
+/* === INFO & STATUS === */
+
+.track-info {
+    padding: 20px;
+}
+
+.track-status-title {
+    font-size: 14px;
+    color: #111111;
+    margin-bottom: 20px;
+}
+
+.track-status-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.track-status {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 10px;
+}
+
+.track-status-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(17, 17, 17, 0.08);
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+}
+
+.track-status.created .track-status-icon {
+    background-color: #F1CB00;
+}
+
+.track-status.in-way .track-status-icon {
+    background-color: #F08A11;
+}
+
+.track-status.ready .track-status-icon {
+    background-color: #A35D0A;
+}
+
+.track-status.done .track-status-icon {
+    background-color: #37C93B;
+}
+
+.track-status-text {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    color: #111111;
+    font-size: 12px;
+    flex: 1;
+}
+
+.track-status-date {
+    color: rgba(17, 17, 17, 0.55);
 }
